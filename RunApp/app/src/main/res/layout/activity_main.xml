@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="1dp"
-            android:backgroundTint="#000000"
+            android:backgroundTint="@color/colorBlack"
             android:backgroundTintMode="add"
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent"
@@ -38,14 +38,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="#D9B5D417"
+                android:background="@color/colorPrimary"
                 android:orientation="horizontal"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="632dp"
                 android:background="@drawable/background2"
-                android:backgroundTint="#75000000"
+                android:backgroundTint="@color/colorBackgroundTint"
                 android:backgroundTintMode="src_over"
                 android:orientation="vertical">
 
@@ -54,10 +54,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="70dp"
-                    android:text="Welcome To RunApp!"
+                    android:text="@string/app_title"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#BFBFBF"
+                    android:textColor="@color/colorAccent"
                     android:textSize="48sp" />
 
                 <ImageButton
@@ -75,9 +75,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="62dp"
                     android:paddingTop="10dp"
-                    android:text="Get Started"
+                    android:text="@string/button_start"
                     android:textAlignment="center"
-                    android:textColor="#BFBFBF"
+                    android:textColor="@color/colorAccent"
                     android:textSize="30sp" />
 
             </LinearLayout>
@@ -85,7 +85,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
-                android:background="#D9B5D417"
+                android:background="@color/colorBlack"
                 android:orientation="horizontal"></LinearLayout>
 
         </LinearLayout>
