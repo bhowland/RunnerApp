@@ -37,15 +37,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/colorPrimary"
-                android:orientation="horizontal"></LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="632dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/background2"
-                android:backgroundTint="@color/colorBackgroundTint"
+                android:backgroundTint="@color/colorBackground"
                 android:backgroundTintMode="src_over"
                 android:orientation="vertical">
 
@@ -57,7 +51,6 @@
                     android:text="@string/app_title"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@color/colorAccent"
                     android:textSize="48sp" />
 
                 <ImageButton
@@ -68,6 +61,7 @@
                     android:background="@android:color/transparent"
                     android:onClick="goToApp"
                     android:scaleType="fitCenter"
+                    android:tint="@color/colorAccent"
                     app:srcCompat="@drawable/ic_start_button" />
 
                 <TextView
@@ -77,14 +71,13 @@
                     android:paddingTop="10dp"
                     android:text="@string/button_start"
                     android:textAlignment="center"
-                    android:textColor="@color/colorAccent"
                     android:textSize="30sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="100dp"
                 android:background="@color/colorBlack"
                 android:orientation="horizontal"></LinearLayout>
 
