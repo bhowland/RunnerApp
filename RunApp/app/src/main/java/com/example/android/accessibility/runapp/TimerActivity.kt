@@ -1,6 +1,7 @@
 package com.example.android.accessibility.runapp
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -15,6 +16,17 @@ class TimerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.android.accessibility.runapp.R.layout.activity_timer)
+        if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            timer_label.text = getString(R.string.timer_label_long)
+        }
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        setContentView(R.layout.activity_timer)
+        if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            timer_label.text = getString(R.string.timer_label_long)
+        }
     }
     fun View.goHome() {
         val intent = Intent(this@TimerActivity, MainActivity::class.java)
@@ -31,6 +43,7 @@ class TimerActivity : AppCompatActivity() {
     private fun pause() {
         started = false
         start_label.text = resources.getString(R.string.timer_start)
+        Start_Icon.setImageResource(R.drawable.ic_start_button)
     }
     fun updateText() {
         val minutes: Int = time / 360000
@@ -48,7 +61,8 @@ class TimerActivity : AppCompatActivity() {
         if(started)   {
             return pause()
         }
-        start_label.text = resources.getString(R.string.timer_start)
+        start_label.text = resources.getString(R.string.timer_pause)
+        Start_Icon.setImageResource(R.drawable.ic_pause)
         started = true
         val handler = Handler()
         handler.post(object : Runnable {
